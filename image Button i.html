@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message to your crush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background-color: #292929;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #imgSec {
+            width: 350px;
+            height: 300px;
+            background-image: url('cyn.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #imgSec .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            clip-path: circle(15px at 93% 7%);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s all ease-in-out;
+        }
+
+        #imgSec:hover .caption {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #imgSec.active .caption {
+            opacity: 1;
+            visibility: visible;
+            clip-path: circle(75%);
+            background-color: rgba(255,255,255,0.9);
+        }
+
+        #imgSec .caption button[type=button] {
+            position: absolute;
+            font-size: 20px;
+            top: 10px;
+            right: 15px;
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            font-weight: bold;
+            box-shadow: 0 0 5px 0 #535353;
+            cursor: pointer;
+            border:none;
+        }
+
+        #imgSec .caption p{
+            font-size: 15px;
+        }
+    </style>
+    <script>
+        function toggleCaption() {
+            let imgSec = document.getElementById('imgSec');
+            imgSec.classList.toggle('active')
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <div id="imgSec">
+            <div class="caption">
+                <button type="button" onclick="toggleCaption()">i</button>
+                <p>Dear crush, on this eve of the new year, I am sending all the good wishes and blessings to you. I want you to shine and keep doing good things this year,May this new year bring all the joy and happiness in your life. I want you to become the happiest person in the world.I can assure you that I will be there for you always. You will be my crush forever. My special feeling for you will never end, stay beautiful and smart girl and be a good girl.Happy New Year.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
